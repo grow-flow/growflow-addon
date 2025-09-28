@@ -8,23 +8,15 @@ arch:
   - armv7
   - aarch64
 startup: services
-map:
-  - "ssl:rw"
 ports:
   8080/tcp: null
 ports_description:
   8080/tcp: "Web interface (Not required for Ingress)"
 options:
   log_level: "info"
-  ssl: false
-  certfile: "fullchain.pem"
-  keyfile: "privkey.pem"
 schema:
   log_level: "list(trace|debug|info|warn|error|fatal)"
-  ssl: "bool"
-  certfile: "str"
-  keyfile: "str"
-image: "moritz03/growflow:{version}"
+image: "moritz03/growflow:latest"
 ingress: true
 ingress_port: 8080
 panel_icon: "mdi:sprout"
