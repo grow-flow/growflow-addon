@@ -1,0 +1,44 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# GrowFlow Plant Tracker Service
+# Starts the GrowFlow application with Home Assistant integration
+# ==============================================================================
+
+# Wait for other services to become available
+bashio::log.info "Starting GrowFlow Plant Tracker..."
+
+# Get configuration from Home Assistant
+ADDON_LOG_LEVEL=$(bashio::config 'log_level')
+
+# Set environment variables for GrowFlow
+export NODE_ENV=production
+export DB_PATH=/data/growflow.db
+export LOG_LEVEL=${ADDON_LOG_LEVEL}
+export PORT=8080
+
+# Configure SSL if enabled
+if bashio::config.true 'ssl'; then
+    export SSL_ENABLED=true
+    export SSL_CERT_FILE=/ssl/$(bashio::config 'certfile')
+    export SSL_KEY_FILE=/ssl/$(bashio::config 'keyfile')
+    bashio::log.info "SSL enabled with certificate: $(bashio::config 'certfile')"
+fi
+
+# Create data directory if it doesn't exist
+if ! bashio::fs.directory_exists "/data"; then
+    bashio::log.info "Creating /data directory..."
+    mkdir -p /data
+fi
+
+# Set permissions
+chown -R root:root /data
+
+# Log configuration
+bashio::log.info "Configuration:"
+bashio::log.info "- Log Level: ${LOG_LEVEL}"
+bashio::log.info "- Database: ${DB_PATH}"
+bashio::log.info "- Port: ${PORT}"
+
+# Start GrowFlow
+bashio::log.info "Starting GrowFlow application..."
+exec node /app/backend/dist/index.js

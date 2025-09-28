@@ -1,0 +1,32 @@
+name: "GrowFlow Plant Tracker"
+description: "Comprehensive plant tracking system for lifecycle management"
+version: "0.1.0"
+slug: "growflow"
+init: false
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: services
+map:
+  - "ssl:rw"
+ports:
+  8080/tcp: null
+ports_description:
+  8080/tcp: "Web interface (Not required for Ingress)"
+options:
+  log_level: "info"
+  ssl: false
+  certfile: "fullchain.pem"
+  keyfile: "privkey.pem"
+schema:
+  log_level: "list(trace|debug|info|warn|error|fatal)"
+  ssl: "bool"
+  certfile: "str"
+  keyfile: "str"
+image: "moritz03/growflow:{version}"
+ingress: true
+ingress_port: 8080
+panel_icon: "mdi:sprout"
+panel_title: "GrowFlow"
+url: "https://github.com/grow-flow/growflow"
