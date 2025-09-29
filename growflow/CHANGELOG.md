@@ -2,6 +2,11 @@
 
 All notable changes to the GrowFlow Home Assistant Add-on will be documented in this file.
 
+## [0.1.1] - 2025-09-30
+
+### Fixed
+- Docker image tag resolution for add-on installation
+
 ## [0.1.0] - 2025-09-28
 
 ### Added
