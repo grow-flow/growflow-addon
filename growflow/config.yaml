@@ -7,7 +7,7 @@ arch:
   - amd64
   - armv7
   - aarch64
-startup: services
+startup: application
 ports:
   8080/tcp: null
 ports_description:
@@ -22,3 +22,5 @@ ingress_port: 8080
 panel_icon: "mdi:sprout"
 panel_title: "GrowFlow"
 url: "https://github.com/grow-flow/growflow"
+map:
+  - data
