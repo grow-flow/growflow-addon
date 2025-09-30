@@ -2,19 +2,26 @@
 
 All notable changes to the GrowFlow Home Assistant Add-on will be documented in this file.
 
+## [v0.1.3] - 2025-09-30
+
+- Fix cors
+
 ## [0.1.2] - 2025-09-30
 
 ### Fixed
+
 - Docker image tag resolution for add-on installation
 
 ## [0.1.1] - 2025-09-30
 
 ### Fixed
+
 - Docker image tag resolution for add-on installation
 
 ## [0.1.0] - 2025-09-28
 
 ### Added
+
 - Initial release of GrowFlow Home Assistant Add-on
 - Complete plant lifecycle tracking (9 phases)
 - Care event logging with detailed data
@@ -27,6 +34,7 @@ All notable changes to the GrowFlow Home Assistant Add-on will be documented in 
 - Multi-architecture support (amd64, armv7, aarch64)
 
 ### Features
+
 - **Plant Management**: Create and track plants through complete lifecycles
 - **Event Logging**: Record watering, feeding, training, observations, and harvests
 - **Strain Database**: Manage genetics with custom phase templates
@@ -35,6 +43,7 @@ All notable changes to the GrowFlow Home Assistant Add-on will be documented in 
 - **Home Assistant Integration**: Seamless sidebar panel integration
 
 ### Technical
+
 - Based on Docker Hub image: `moritz03/growflow:latest`
 - S6-overlay service management
 - Bashio integration for HA Supervisor communication
@@ -43,6 +52,7 @@ All notable changes to the GrowFlow Home Assistant Add-on will be documented in 
 - Material-UI responsive interface
 
 ### Configuration Options
+
 - `log_level`: Control logging verbosity
 - `ssl`: Enable/disable SSL encryption
 - `certfile`: SSL certificate file path
