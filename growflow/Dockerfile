@@ -26,6 +26,6 @@ LABEL \
     io.hass.description="Comprehensive plant tracking system" \
     io.hass.arch="armhf|aarch64|i386|amd64" \
     io.hass.type="addon" \
-    io.hass.version="v0.1.7"
+    io.hass.version="v0.1.8"
 
 CMD ["/run.sh"]
