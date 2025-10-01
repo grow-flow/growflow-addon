@@ -40,8 +40,7 @@ The add-on configuration options are documented in the [add-on's README](growflo
 
 ## License
 
-- **Add-on Repository**: CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial)
-- **GrowFlow Application**: CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial)
+CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial)
 
 See [LICENSE](https://github.com/grow-flow/growflow/blob/main/LICENSE) for details.
 
