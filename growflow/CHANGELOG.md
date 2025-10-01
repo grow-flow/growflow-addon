@@ -2,12 +2,10 @@
 
 All notable changes to the GrowFlow Home Assistant Add-on will be documented in this file.
 
-## [v0.1.6] - 2025-09-30
+## [v0.1.3 - v0.1.6] - 2025-09-30
 
+- Homeassistant compatibility fixes
 - Fix ingress
-
-## [v0.1.3] - 2025-09-30
-
 - Fix cors
 
 ## [0.1.2] - 2025-09-30
