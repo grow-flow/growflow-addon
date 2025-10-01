@@ -8,7 +8,7 @@ Home Assistant Add-ons Repository for the GrowFlow Plant Tracking Application.
 
 ## About
 
-This repository contains the Home Assistant Add-on configuration for [GrowFlow](https://github.com/grow-flow/growflow), a comprehensive plant tracking system for documenting complete plant lifecycles from germination to harvest.
+This repository contains the Home Assistant Add-on configuration for GrowFlow, a comprehensive plant tracking system for documenting complete plant lifecycles from germination to harvest.
 
 For detailed features, documentation, and changelog, please visit the main project: **[GrowFlow Repository](https://github.com/grow-flow/growflow)**
 
@@ -17,7 +17,7 @@ For detailed features, documentation, and changelog, please visit the main proje
 ### Step 1: Add Repository
 
 1. Open your Home Assistant frontend
-2. Navigate to **Supervisor** → **Add-on Store**
+2. Navigate to **Settings** → **Add-ons** → **Add-on Store**
 3. Click the **⋮** menu (three dots) in the top right
 4. Select **Repositories**
 5. Add this repository URL:
@@ -33,13 +33,6 @@ https://github.com/grow-flow/growflow-addon
 3. Click on the add-on
 4. Click **Install**
 5. Wait for the installation to complete
-
-### Step 3: Configuration & Start
-
-1. Configure the add-on according to your needs
-2. Click **Start**
-3. Optionally enable **Auto-start** and **Watchdog**
-4. Access via the **GrowFlow** panel in Home Assistant sidebar
 
 ## Configuration
 
