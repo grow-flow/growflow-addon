@@ -1,4 +1,4 @@
-ARG BUILD_FROM=moritz03/growflow:latest
+ARG BUILD_FROM=ghcr.io/grow-flow/growflow:latest
 FROM $BUILD_FROM
 
 # Install bashio for Home Assistant integration

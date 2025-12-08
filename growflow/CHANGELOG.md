@@ -2,6 +2,20 @@
 
 All notable changes to the GrowFlow Home Assistant Add-on will be documented in this file.
 
+## [v0.2.0] - 2025-12-08
+
+### Changed
+
+- **Breaking**: Migrated from Docker Hub to GitHub Container Registry (ghcr.io)
+- Base image now pulled from `ghcr.io/grow-flow/growflow`
+- Added automated version bumping via GitHub Actions
+- Automated cross-repo synchronization on releases
+
+### Technical
+
+- New automation workflows for version management
+- Repository dispatch integration with main repo
+
 ## [v0.1.3 - v0.1.6] - 2025-09-30
 
 - Homeassistant compatibility fixes
