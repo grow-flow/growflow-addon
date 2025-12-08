@@ -1,6 +1,6 @@
 name: "GrowFlow Plant Tracker"
 description: "Comprehensive plant tracking system for lifecycle management"
-version: "v0.3.15"
+version: "v0.3.16"
 slug: "growflow"
 init: false
 arch:
