@@ -1,4 +1,6 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bash
+# shellcheck disable=SC1091
+source /usr/lib/bashio/bashio.sh
 
 bashio::log.info "Starting GrowFlow Plant Tracker..."
 
