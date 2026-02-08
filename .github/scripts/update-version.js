@@ -31,6 +31,7 @@ configContent = configContent.replace(
   /^version:\s*"v[\d\.]+"$/m,
   `version: "${version}"`
 );
+// Only update image line if already enabled (not commented out)
 configContent = configContent.replace(
   /^image:\s*".*"$/m,
   `image: "ghcr.io/grow-flow/growflow-{arch}"`
