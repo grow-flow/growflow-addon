@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/grow-flow/growflow:latest
+ARG BUILD_FROM=ghcr.io/grow-flow/growflow:v0.4.1
 FROM $BUILD_FROM
 
 # Install bashio for Home Assistant integration
@@ -26,6 +26,6 @@ LABEL \
     io.hass.description="Comprehensive plant tracking system" \
     io.hass.arch="aarch64|amd64" \
     io.hass.type="addon" \
-    io.hass.version="v0.3.19"
+    io.hass.version="v0.4.1"
 
 CMD ["/run.sh"]
