@@ -28,7 +28,7 @@ console.log(`Dry run: ${dryRun}`);
 // Update config.yaml
 let configContent = fs.readFileSync(configPath, 'utf8');
 configContent = configContent.replace(
-  /^version:\s*"v[\d\.]+"$/m,
+  /^version:\s*"v[\d.]+"$/m,
   `version: "${version}"`
 );
 // Only update image line if already enabled (not commented out)
@@ -52,7 +52,7 @@ dockerfileContent = dockerfileContent.replace(
   `ARG BUILD_FROM=ghcr.io/grow-flow/growflow:${version}`
 );
 dockerfileContent = dockerfileContent.replace(
-  /io\.hass\.version="v[\d\.]+"/,
+  /io\.hass\.version="v[\d.]+"/,
   `io.hass.version="${version}"`
 );
 
