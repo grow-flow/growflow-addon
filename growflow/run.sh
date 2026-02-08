@@ -14,6 +14,12 @@ export UPLOADS_PATH="/data/uploads"
 
 mkdir -p /data/uploads
 
+# Debug: show filesystem
+bashio::log.info "BUILD_FROM image contents:"
+ls -la /app/ 2>&1 || bashio::log.warning "/app does not exist"
+which node 2>&1 || bashio::log.warning "node not found"
+cat /etc/os-release | head -2
+
 # Ensure database schema is up to date
 bashio::log.info "Syncing database schema..."
 cd /app/backend
