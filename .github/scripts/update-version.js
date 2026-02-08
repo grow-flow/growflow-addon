@@ -33,7 +33,7 @@ configContent = configContent.replace(
 );
 configContent = configContent.replace(
   /^image:\s*".*"$/m,
-  `image: "ghcr.io/grow-flow/growflow"`
+  `image: "ghcr.io/grow-flow/growflow-{arch}"`
 );
 
 if (dryRun) {
@@ -48,7 +48,7 @@ if (dryRun) {
 let dockerfileContent = fs.readFileSync(dockerfilePath, 'utf8');
 dockerfileContent = dockerfileContent.replace(
   /^ARG BUILD_FROM=.*$/m,
-  `ARG BUILD_FROM=ghcr.io/grow-flow/growflow:latest`
+  `ARG BUILD_FROM=ghcr.io/grow-flow/growflow:${version}`
 );
 dockerfileContent = dockerfileContent.replace(
   /io\.hass\.version="v[\d\.]+"/,
