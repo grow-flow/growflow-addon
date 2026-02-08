@@ -2,6 +2,14 @@
 
 All notable changes to the GrowFlow Home Assistant Add-on will be documented in this file.
 
+## [v0.4.2] - 2026-02-08
+
+### Changed
+
+- Updated to base image version v0.4.2
+- Using GitHub Container Registry (ghcr.io/grow-flow/growflow)
+
+
 ## [v0.4.1] - 2026-02-08
 
 ### Changed
