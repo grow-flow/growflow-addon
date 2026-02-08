@@ -5,7 +5,6 @@ slug: "growflow"
 init: false
 arch:
   - amd64
-  - armv7
   - aarch64
 startup: application
 ports:
@@ -16,7 +15,7 @@ options:
   log_level: "info"
 schema:
   log_level: "list(trace|debug|info|warn|error|fatal)"
-image: "ghcr.io/grow-flow/growflow"
+image: "ghcr.io/grow-flow/growflow-{arch}"
 ingress: true
 ingress_port: 8080
 panel_icon: "mdi:sprout"
