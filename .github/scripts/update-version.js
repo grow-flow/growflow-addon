@@ -64,6 +64,22 @@ if (dryRun) {
   console.log('✓ Updated Dockerfile');
 }
 
+// Update build.yaml
+const buildPath = path.join(baseDir, 'growflow/build.yaml');
+let buildContent = fs.readFileSync(buildPath, 'utf8');
+buildContent = buildContent.replace(
+  /ghcr\.io\/grow-flow\/growflow:v[\d.]+/g,
+  `ghcr.io/grow-flow/growflow:${version}`
+);
+
+if (dryRun) {
+  console.log('\n[build.yaml] Would update to:');
+  console.log(buildContent);
+} else {
+  fs.writeFileSync(buildPath, buildContent);
+  console.log('✓ Updated build.yaml');
+}
+
 // Update CHANGELOG.md
 const today = new Date().toISOString().split('T')[0];
 const changelogEntry = `## [${version}] - ${today}
