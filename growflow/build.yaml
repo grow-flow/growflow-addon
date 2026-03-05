@@ -1,3 +1,3 @@
 build_from:
-  amd64: "ghcr.io/grow-flow/growflow:v1.0.1"
-  aarch64: "ghcr.io/grow-flow/growflow:v1.0.1"
+  amd64: "ghcr.io/grow-flow/growflow:v1.1.1"
+  aarch64: "ghcr.io/grow-flow/growflow:v1.1.1"
